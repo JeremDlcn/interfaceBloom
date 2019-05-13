@@ -1,0 +1,90 @@
+html{
+	scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+}
+
+body{
+	font-family: 'Comfortaa','Lato', sans-serif;
+	background-color: #EEEEEE;
+	overflow-x: hidden;
+	margin: 0 auto;
+	padding:0;
+	width: 100%;
+	min-height: 100%;
+	color: #333333;
+	background-image: url('background.png');
+	background-size: cover;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+header p{
+	font-size: 40px;
+	color: #61D800;
+}
+
+
+.lumin {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 200px;
+	margin-bottom: 50px;
+}
+
+.temphumid {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;	
+
+}
+.temphumid > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.temphumid p {
+	text-align: center;
+}
+.borderlum {
+	border-radius: 50px;
+	border: 2px solid #61D800;
+	width: 400px;
+	height: 50px;
+	margin-top: 50px;
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 25px;
+}
+.borderlum img {
+	margin-left: 20px;
+	margin-right: 70px;
+}
+
+
+.bordertemp, .borderhumid {
+	font-size: 50px;
+	color: #61D800;
+	margin-top: 50px;
+}
+@media screen and (max-width: 800px) {
+	.boderlum {
+		width: 200px;
+		height: 35px;
+	}
+
+	body {
+		background-color: #333333;
+	}
+}
