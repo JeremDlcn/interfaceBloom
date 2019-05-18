@@ -1,4 +1,5 @@
 html{
+	font-family: 'Comfortaa','Lato', sans-serif;
 	scroll-behavior: smooth;
 	margin: 0;
 	padding: 0;
@@ -14,7 +15,7 @@ body{
 	width: 100%;
 	min-height: 100%;
 	color: #333333;
-	background-image: url('background.png');
+	background-image: url('image/background.png');
 	background-size: cover;
 }
 
@@ -28,6 +29,7 @@ header {
 header p{
 	font-size: 40px;
 	color: #61D800;
+	margin-top: 80px;
 }
 
 
@@ -60,7 +62,7 @@ header p{
 	width: 400px;
 	height: 50px;
 	margin-top: 50px;
-	padding: 10px;
+	padding: 40px;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
@@ -69,7 +71,7 @@ header p{
 }
 .borderlum img {
 	margin-left: 20px;
-	margin-right: 70px;
+	margin-right: 50px;
 }
 
 
