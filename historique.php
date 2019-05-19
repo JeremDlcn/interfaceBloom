@@ -1,4 +1,17 @@
+<?php
+try
+{
+	$bdd = new PDO('mysql:host=localhost;dbname=plante;charset=utf8', 'root', '');
+}
+catch (Exception $e)
+{
+        die('Erreur : ' . $e->getMessage());
+}
+$sth = $bdd->query('SELECT * FROM plante.plante');
 
+
+
+?> 
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
@@ -24,9 +37,43 @@
  		<header>
 			<p>Bloom</p>
 		</header>
-		<section class="info">
-			
-		</section>
+		<section>
+	
+			<table class="table table-hover">
+			  <thead>
+			    <tr>
+			      <th scope="col">Numéro</th>
+			      <th scope="col">Nom</th>
+			      <th scope="col">Catégorie</th>
+			      <th scope="col">Humidité</th>
+			      <th scope="col">Température</th>
+			      <th scope="col">Luminosité</th>
+			      <th scope="col">Période de Floraison</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			  	<?php
+						while ($row = $sth->fetch(PDO::FETCH_ASSOC)):
+					?>
 
+			    <tr>
+			    	
+			      <th scope="row"><?=$row['id']?></th>
+			      <td><?=$row['Nom']?></td>
+			      <td><?=$row['Catégorisation']?></td>
+			      <td><?=$row['Description']?></td>
+			      <td><?=$row['Humidité']?></td>
+			      <td><?=$row['Luminosité']?></td>
+			      <td><?=$row['Période de floraison']?></td>
+			    </tr>
+			    	<?php
+						endwhile;
+					?>
+			  </tbody>
+			</table>
+		</section>
+		
 	</body>
 </html>
+
+

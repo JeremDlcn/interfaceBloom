@@ -40,12 +40,14 @@ header p{
 	align-items: center;
 	height: 200px;
 	margin-bottom: 50px;
+	margin-top: 50px;
 }
 
 .temphumid {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;	
+	justify-content: space-around;
+	flex-wrap: wrap;	
 
 }
 .temphumid > div {
@@ -59,10 +61,10 @@ header p{
 .borderlum {
 	border-radius: 50px;
 	border: 2px solid #61D800;
-	width: 400px;
-	height: 50px;
+	width: 300px;
+	height: 75px;
 	margin-top: 50px;
-	padding: 40px;
+	padding: 0;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
@@ -71,7 +73,7 @@ header p{
 }
 .borderlum img {
 	margin-left: 20px;
-	margin-right: 50px;
+	margin-right: 30px;
 }
 
 
@@ -80,6 +82,11 @@ header p{
 	color: #61D800;
 	margin-top: 50px;
 }
+
+.paddingcote {
+	padding: 0 200px 0 200px;
+}
+
 @media screen and (max-width: 800px) {
 	.boderlum {
 		width: 200px;

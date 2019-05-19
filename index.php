@@ -1,16 +1,18 @@
 <?php
-#	try
-#	{
-#		$bdd = new PDO('mysql:host=localhost;dbname=plante;charset=utf8', 'root', '');
-#	}
-#	catch (Exception $e)
-#	{
-#	        die('Erreur : ' . $e->getMessage());
-#	}
-#	$reponse = $bdd->query('SELECT * FROM plante.plante');
-#	$donnees = $reponse->fetch();
-#
-#	?>
+try
+{
+	$bdd = new PDO('mysql:host=localhost;dbname=plante;charset=utf8', 'root', '');
+}
+catch (Exception $e)
+{
+        die('Erreur : ' . $e->getMessage());
+}
+$sth = $bdd->query('SELECT * FROM plante.plante');
+$sth2 = $bdd->query('SELECT * FROM plante.mesures');
+$row = $sth->fetch(PDO::FETCH_ASSOC);
+$row2 = $sth2->fetch(PDO::FETCH_ASSOC);
+#var_dump($row)
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -38,18 +40,18 @@
 		</header>
 
 		<section class="info">
-			<div class="lumin">
-				<p>Luminosité</p>
-				<div class="borderlum"><img src="image/sun.png"/><span>plein soleil</span></div>
-			</div>
 			<div class="temphumid">
+				<div class="lumin">
+					<p>Luminosité</p>
+					<div class="borderlum"><img src="image/sun.png"/><span>Niveau <?=$row2['luminosite']?></span></div>
+				</div>
 				<div>
 					<p>Température</p>
-					<div class="bordertemp">19.7°C</div>
+					<div class="bordertemp"><?=$row2['temperature']?>°C</div>
 				</div>
 				<div>
 					<p>Humidité</p>
-					<div class="borderhumid">87%</div>
+					<div class="borderhumid"><?=$row2['humidite']?>%</div>
 				</div>
 			</div>
 			
