@@ -7,7 +7,9 @@ catch (Exception $e)
 {
         die('Erreur : ' . $e->getMessage());
 }
-$sth = $bdd->query('SELECT * FROM plante.plante');
+
+
+$sth = $bdd->query('SELECT * FROM plante.plante ORDER BY nom ASC');
 
 ?>
 
@@ -31,7 +33,11 @@ $sth = $bdd->query('SELECT * FROM plante.plante');
 			  <a class="flex-sm-fill text-sm-center nav-link text-success" href="historique.php"><i class="fas fa-history"></i>  &nbsp  Historique</a>
 			  <a class="flex-sm-fill text-sm-center nav-link active bg-success" href=" "><i class="fab fa-envira"></i> &nbsp Planter</a>
 			  <a class="flex-sm-fill text-sm-center nav-link text-success" href="add.php" tabindex="-1" aria-disabled="true"><i class="fas fa-plus-circle"></i> &nbsp Ajouter un type de plante</a>
-			</nav>
+			  </nav>
+			  <div class="gear-container">
+				<a href="parameter.php" class="gear"><i class="fas fa-cog "></i></a>
+			</div>
+			
 		<!--Menu-->
  		<header>
 			<p>Bloom</p>
@@ -51,7 +57,7 @@ $sth = $bdd->query('SELECT * FROM plante.plante');
 				  	<?php
 						while ($row = $sth->fetch(PDO::FETCH_ASSOC)):
 					?>
-					 <a class="dropdown-item" href="#"><?=$row['Nom']?></a>
+					 <a class="dropdown-item" href="#"><?=$row['nom']?></a>
 				
 			    	<?php
 						endwhile;
@@ -62,7 +68,6 @@ $sth = $bdd->query('SELECT * FROM plante.plante');
 			  </div>
 			</div>
 		</section>
-
 			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

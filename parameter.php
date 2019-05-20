@@ -1,20 +1,28 @@
 <?php
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=plante;charset=utf8', 'root', '');
+	$bdd = new PDO('mysql:host=localhost;dbname=plante;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 }
 catch (Exception $e)
 {
         die('Erreur : ' . $e->getMessage());
 }
-$sth = $bdd->query('SELECT * FROM plante');
-$sth2 = $bdd->query('SELECT * FROM mesures');
-$sth3 = $bdd->query('SELECT * FROM user ORDER BY id DESC');
-$row = $sth->fetch(PDO::FETCH_ASSOC);
-$row2 = $sth2->fetch(PDO::FETCH_ASSOC);
-$row3 = $sth3->fetch(PDO::FETCH_ASSOC);
-?>
 
+
+if(isset($_POST['mail'])) {
+
+        // ajout d'entrée dans la table plante de la base de données plante.
+    $req = $bdd->prepare('INSERT INTO user(mail) VALUES(:mail)');
+
+    $req->execute(array(
+        'mail' => $_POST['mail']
+    ));
+
+}
+
+$sth = $bdd->query('SELECT * FROM user ORDER BY id DESC');
+$row = $sth->fetch(PDO::FETCH_ASSOC);
+?>
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
@@ -30,46 +38,39 @@ $row3 = $sth3->fetch(PDO::FETCH_ASSOC);
 	</head>
 	<body>
 				<nav class="nav nav-pills flex-column flex-sm-row">
-			  <a class="flex-sm-fill text-sm-center nav-link active bg-success" href="/"><i class="fas fa-home"></i> &nbsp  Accueil</a>
+			  <a class="flex-sm-fill text-sm-center nav-link text-success" href="/"><i class="fas fa-home"></i> &nbsp  Accueil</a>
 			  <a class="flex-sm-fill text-sm-center nav-link text-success" href="historique.php"> <i class="fas fa-history"></i>  &nbsp  Historique</a>
 			  <a class="flex-sm-fill text-sm-center nav-link text-success" href="planter.php"><i class="fab fa-envira"></i> &nbsp Planter</a>
 			  <a class="flex-sm-fill text-sm-center nav-link text-success" href="add.php" tabindex="-1" aria-disabled="true"><i class="fas fa-plus-circle"></i> &nbsp Ajouter un type de plante</a>
 			  </nav>
 			  <div class="gear-container">
-				<a href="parameter.php" class="gear"><i class="fas fa-cog "></i></a>
+				<a href="index.php" class="gear"><i class="fas fa-cog "></i></a>
 			  </div>
 
 		<!--Menu-->
  		<header>
 			<p>Bloom</p>
 		</header>
-		<section class="compte">
-			<div class="media">
-			  <img src="image/man.jpg" class="align-self-center mr-3" alt="...">
-			  <div class="media-body">
+		<section>
+			<div class="mediagear">
+			  <img src="image/man.jpg" class="mr-3" alt="...">
+			  <div class="media-body mediagear">
 			    <h5 class="mt-0">Michel Rillette</h5>
-			    Adresse mail : <?= $row3['mail'] ?>
+			    Adresse mail actuelle : <?= $row['mail'] ?>
 			  </div>
 			</div>
-		</section>
 
 
-		<section class="info">
-			<div class="temphumid">
-				<div class="lumin">
-					<p>Luminosité</p>
-					<div class="borderlum"><img src="image/sun.png"/><span>Niveau <?=$row2['luminosite']?></span></div>
+			<form class="mediagear" action="parameter.php" method="post">
+				<div class="input-group mb-3 paddingcote">
+				  <div class="input-group-prepend">
+				    <span class="input-group-text" id="basic-addon1">Adresse Mail</span>
+				  </div>
+				  <input type="text" class="form-control" placeholder="Entrez votre nouvelle adresse mail" aria-label="Nom" aria-describedby="basic-addon1" name="mail">
 				</div>
-				<div>
-					<p>Température</p>
-					<div class="bordertemp"><?=$row2['temperature']?>°C</div>
-				</div>
-				<div>
-					<p>Humidité</p>
-					<div class="borderhumid"><?=$row2['humidite']?>%</div>
-				</div>
-			</div>
-			
+					<input class="btn btn-success" type="submit" value="Ajouter">
+			</form>
 		</section>
+
 	</body>
 </html>

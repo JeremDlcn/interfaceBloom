@@ -24,7 +24,6 @@ if(isset($_POST['nom']) && isset($_POST['categorie']) && isset($_POST['descripti
     ));
 
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -46,11 +45,14 @@ if(isset($_POST['nom']) && isset($_POST['categorie']) && isset($_POST['descripti
 			  <a class="flex-sm-fill text-sm-center nav-link text-success" href="planter.php "><i class="fab fa-envira"></i> &nbsp Planter</a>
 			  <a class="flex-sm-fill text-sm-center nav-link active bg-success" href="add.php" tabindex="-1" aria-disabled="true"><i class="fas fa-plus-circle"></i> &nbsp Ajouter un type de plante</a>
 		</nav>
+		<div class="gear-container">
+				<a href="parameter.php" class="gear"><i class="fas fa-cog "></i></a>
+			</div>
 		<!--Menu-->
  		<header>
 			<p>Bloom</p>
 		</header>
-		<section class="d-flex flex-column paddingcote align-items-center>
+		<section class="d-flex flex-column paddingcote justify-content-center">
 			<form method="post" action="add.php">
 			<div class="input-group mb-3">
 			  <div class="input-group-prepend">
@@ -102,6 +104,7 @@ if(isset($_POST['nom']) && isset($_POST['categorie']) && isset($_POST['descripti
 			</div>
 			<input class="btn btn-success" type="submit" value="Ajouter">
 			</form>
+			
 		</section>
 		  		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   				<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

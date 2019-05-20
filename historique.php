@@ -7,7 +7,8 @@ catch (Exception $e)
 {
         die('Erreur : ' . $e->getMessage());
 }
-$sth = $bdd->query('SELECT * FROM plante.plante');
+$sth = $bdd->query('SELECT * FROM mesures');
+$sth2 = $bdd->query('SELECT * FROM plante');
 
 
 
@@ -33,6 +34,9 @@ $sth = $bdd->query('SELECT * FROM plante.plante');
 			  <a class="flex-sm-fill text-sm-center nav-link text-success" href="planter.php"><i class="fab fa-envira"></i> &nbsp Planter</a>
 			  <a class="flex-sm-fill text-sm-center nav-link text-success" href="add.php" tabindex="-1" aria-disabled="true"><i class="fas fa-plus-circle"></i> &nbsp Ajouter un type de plante</a>
 			</nav>
+			<div class="gear-container">
+				<a href="parameter.php" class="gear"><i class="fas fa-cog "></i></a>
+			</div>
 		<!--Menu-->
  		<header>
 			<p>Bloom</p>
@@ -42,29 +46,25 @@ $sth = $bdd->query('SELECT * FROM plante.plante');
 			<table class="table table-hover">
 			  <thead>
 			    <tr>
-			      <th scope="col">Numéro</th>
+			      <th scope="col">Date</th>
 			      <th scope="col">Nom</th>
-			      <th scope="col">Catégorie</th>
 			      <th scope="col">Humidité</th>
 			      <th scope="col">Température</th>
 			      <th scope="col">Luminosité</th>
-			      <th scope="col">Période de Floraison</th>
 			    </tr>
 			  </thead>
 			  <tbody>
 			  	<?php
-						while ($row = $sth->fetch(PDO::FETCH_ASSOC)):
+						while ($row = $sth->fetch(PDO::FETCH_ASSOC) and $row2 = $sth2->fetch(PDO::FETCH_ASSOC)):
 					?>
 
 			    <tr>
 			    	
-			      <th scope="row"><?=$row['id']?></th>
-			      <td><?=$row['Nom']?></td>
-			      <td><?=$row['Catégorisation']?></td>
-			      <td><?=$row['Description']?></td>
-			      <td><?=$row['Humidité']?></td>
-			      <td><?=$row['Luminosité']?></td>
-			      <td><?=$row['Période de floraison']?></td>
+			      <th scope="row"><?=$row['date']?></th>
+			      <td><?=$row2['nom']?></td>
+			      <td><?=$row['humidite']?>%</td>
+			      <td><?=$row['temperature']?>°C</td>
+			      <td>Niveau <?=$row['luminosite']?></td>
 			    </tr>
 			    	<?php
 						endwhile;
