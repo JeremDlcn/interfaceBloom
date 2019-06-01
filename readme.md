@@ -61,4 +61,4 @@ La dernière page est une page qui sert à ajouter une catégorie de plante dans
 ![Ajouter type de plante](https://vibrant-knuth-d6e0a8.netlify.com/add.png)
   
   Lien vers une version de l'interface (alternative) : 
-[https://xd.adobe.com/view/0e55b92c-c74d-4315-5279-d2dbc6b8447e-7864/?hints=off](https://xd.adobe.com/view/0e55b92c-c74d-4315-5279-d2dbc6b8447e-7864/?hints=off)
+[Cliquez-ici](https://xd.adobe.com/view/0e55b92c-c74d-4315-5279-d2dbc6b8447e-7864/?hints=off)
