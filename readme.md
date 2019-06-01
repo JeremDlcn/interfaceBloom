@@ -20,6 +20,8 @@ L'objet connecté en constitué de deux capteurs permettant de mesurer la lumino
 **add.php** permet d'ajouter un type de plante ainsi que ces caractéristiques dans la base de données pour permettre de la rendre accessible pour les autres utilisateurs.
 **style.css** est le fichier css permettant de mettre en forme quelque éléments ainsi que de placer l'image de fond.
 **image** est le dossier contenant les images qui sont utilisés par l'interface.
+**base de données** est le dossier contenant le fichier permettant de crée la base de données
+**script** est le dossier contenant le script python qui ajoute les mesures à la base de données.
 
 Utilisation du framework Bootstrap et de Fontawesome.
 Bootstrap : [https://getbootstrap.com/](https://getbootstrap.com/)
