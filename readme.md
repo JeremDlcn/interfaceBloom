@@ -59,3 +59,6 @@ Les paramètres sont accessible en cliquant sur l'écrou, ces paramètres permet
 
 La dernière page est une page qui sert à ajouter une catégorie de plante dans la base de données pour la rendre accessible à tout les autres utilisateur.
 ![Ajouter type de plante](https://vibrant-knuth-d6e0a8.netlify.com/add.png)
+  
+  Lien vers une version de l'interface (alternative) : 
+![Cliquez ici](https://xd.adobe.com/view/0e55b92c-c74d-4315-5279-d2dbc6b8447e-7864/?hints=off)
