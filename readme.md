@@ -1,6 +1,7 @@
 ﻿# Projet Plante connecté: Bloom
 Le projet  **plante connecté**  consistent en la création d'un objet connecté permettant de connaître la température, l'humidité ou encore la luminosité que reçoit la plante surveiller par l'objet , ce projet est effectué à l'occasion d'un projet de première année en école d'informatique se déroulant du 4 avril au 7 juin 2019.
-Notre objet connecté se nomme Bloom.
+
+Notre objet connecté se nomme **Bloom**.
 
 ## Structure du projet
 - Une interface web 
@@ -15,12 +16,19 @@ L'objet connecté en constitué de deux capteurs permettant de mesurer la lumino
 
 ## Contenu du dossier
 **index.php** est la page d'accueil de l'interface ou l'on peut visualiser les dernières **informations** envoyés par les capteurs.
+
 **historique.php** est la page montrant l'historique des données captés sur chaque plante.
+
 **planter.php** est la page permettant d'ajouter une plante dans sa liste pour qu'elle soit pris en compte par l'interface et apparaissent dans la base de données.
+
 **add.php** permet d'ajouter un type de plante ainsi que ces caractéristiques dans la base de données pour permettre de la rendre accessible pour les autres utilisateurs.
+
 **style.css** est le fichier css permettant de mettre en forme quelque éléments ainsi que de placer l'image de fond.
+
 **image** est le dossier contenant les images qui sont utilisés par l'interface.
-**base de données** est le dossier contenant le fichier permettant de crée la base de données
+
+**base de données** est le dossier contenant le fichier permettant de crée la base de données.  
+
 **script** est le dossier contenant le script python qui ajoute les mesures à la base de données.
 
 Utilisation du framework Bootstrap et de Fontawesome.
