@@ -7,10 +7,8 @@ catch (Exception $e)
 {
         die('Erreur : ' . $e->getMessage());
 }
-$sth = $bdd->query('SELECT * FROM plante');
-$sth2 = $bdd->query('SELECT * FROM mesures');
+$sth2 = $bdd->query('SELECT * FROM mesures ORDER BY id DESC');
 $sth3 = $bdd->query('SELECT * FROM user ORDER BY id DESC');
-$row = $sth->fetch(PDO::FETCH_ASSOC);
 $row2 = $sth2->fetch(PDO::FETCH_ASSOC);
 $row3 = $sth3->fetch(PDO::FETCH_ASSOC);
 ?>

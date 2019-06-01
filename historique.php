@@ -7,10 +7,16 @@ catch (Exception $e)
 {
         die('Erreur : ' . $e->getMessage());
 }
-$sth = $bdd->query('SELECT * FROM mesures');
+$sth = $bdd->query('SELECT * FROM mesures ORDER BY id DESC');
 $sth2 = $bdd->query('SELECT * FROM plante');
+$sth3 = $bdd->query('SELECT * FROM user ORDER BY id DESC');
 
-
+$row = $sth->fetch(PDO::FETCH_ASSOC);
+$row3 = $sth3->fetch(PDO::FETCH_ASSOC);
+ 
+if ($row['temperature'] <= 0 || $row['humidite'] <= 0) {
+	mail($row3['mail'], "Alerte condition de la plante critique", "Votre plante n'est pas en bonne condition veuillez à vous en occuper");
+}
 
 ?> 
 <!DOCTYPE html>
