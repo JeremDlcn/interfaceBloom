@@ -40,23 +40,23 @@ Dans ce paragraphe je vais présenter les pages et fonctionnalités de l'interfa
 
 
 Tout d'abord, la page d'accueil qui permet de visualiser les dernières données acquises par les capteurs et d'accéder au autre page à l'aide du menu situé en haut.
-![Ajouter type de plante](https://cloud-image-dlcn.netlify.com/accueil.png)
+![Ajouter type de plante](https://cloud-image-dlcn.netlify.com/interface-bloom/accueil.png)
 
 
 Ensuite la page suivante est la plage historique qui permet de visualiser les données des capteurs selon les plantes choisi par l'utilisateur.
 Les données sont classés par nom, date, humidité, température et luminosité.
-![Ajouter type de plante](https://cloud-image-dlcn.netlify.com/historique.png)
+![Ajouter type de plante](https://cloud-image-dlcn.netlify.com/interface-bloom/historique.png)
 
 
 La page de plantation permet de sélectionner la plante que l'on souhaite ajouté à son tableau de bord pour suivre ces conditions en temps réel.
-![Ajouter type de plante](https://cloud-image-dlcn.netlify.com/planter.png)
+![Ajouter type de plante](https://cloud-image-dlcn.netlify.com/interface-bloom/planter.png)
 
 
 Les paramètres sont accessible en cliquant sur l'écrou, ces paramètres permettent de modifier l'adresse mail qui servira de boîte de réception pour les messages d'alerte.
-![Ajouter type de plante](https://cloud-image-dlcn.netlify.com/mail.png)
+![Ajouter type de plante](https://cloud-image-dlcn.netlify.com/interface-bloom/mail.png)
 
 
 
 La dernière page est une page qui sert à ajouter une catégorie de plante dans la base de données pour la rendre accessible à tout les autres utilisateur.
-![Ajouter type de plante](https://cloud-image-dlcn.netlify.com/add.png)
+![Ajouter type de plante](https://cloud-image-dlcn.netlify.com/interface-bloom/add.png)
 
