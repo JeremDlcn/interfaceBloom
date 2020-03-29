@@ -45,11 +45,11 @@ Tout d'abord, la page d'accueil qui permet de visualiser les dernières données
 
 Ensuite la page suivante est la plage historique qui permet de visualiser les données des capteurs selon les plantes choisi par l'utilisateur.
 Les données sont classés par nom, date, humidité, température et luminosité.
-![Ajouter type de plante](https:/cloud-image-dlcn.netlify.com/historique.png)
+![Ajouter type de plante](https://cloud-image-dlcn.netlify.com/historique.png)
 
 
 La page de plantation permet de sélectionner la plante que l'on souhaite ajouté à son tableau de bord pour suivre ces conditions en temps réel.
-![Ajouter type de plante](https:/cloud-image-dlcn.netlify.com/planter.png)
+![Ajouter type de plante](https://cloud-image-dlcn.netlify.com/planter.png)
 
 
 Les paramètres sont accessible en cliquant sur l'écrou, ces paramètres permettent de modifier l'adresse mail qui servira de boîte de réception pour les messages d'alerte.
